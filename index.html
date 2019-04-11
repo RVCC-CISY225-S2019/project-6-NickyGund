@@ -11,13 +11,45 @@
 </head>
 
 <body>
-    <main class="main">
-        <header class="header">
-            <div class="content">
-                <img class="logo main-col" src="images/logo-1913689.svg" alt="Company Logo">
-                <div class="page-title">Web Dev I</div>
-            </div>
-        </header>
+    <!-- skip link -->
+    <a href="#main" class="skip">Skip to main</a>
+    <!-- start of header -->
+    <header id="header" class="header">
+        <nav class="navbar">
+            <span class="navbar-toggle" id="js-navbar-toggle">
+                <i id="symbol-toggle" class="fas fa-bars"></i>
+            </span>
+            <a href="#header" class="logo">
+                <div class="logo-container">
+                    <img class="logo" src="images/logo-1913689.svg" alt="Company Logo">
+                    <h1 class="page-title">Web Dev I</h1>
+                </div>
+            </a>
+            <ul class="main-nav" id="js-menu">
+                <li>
+                    <a href="#main" class="nav-links">Main</a>
+                </li>
+                <li>
+                    <a href="#about-me" class="nav-links">About Me</a>
+                </li>
+                <li>
+                    <a href="#pictures" class="nav-links">My Photos</a>
+                </li>
+                <li>
+                    <a href="#story" class="nav-links">A Story</a>
+                </li>
+                <li>
+                    <a href="#contact" class="nav-links">Contact Me</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <main id="main" tabindex="-1" class="main">
+
         <section class="hero">
             <div class="content">
                 <picture>
@@ -32,7 +64,7 @@
                 <p class="my-location">Warren, NJ</p>
             </div>
         </section>
-        <section class="about-me">
+        <section id="about-me" class="about-me">
             <div class="content">
                 <div class="about-content">
                     <p class="iama">I want to be...</p>
@@ -46,8 +78,12 @@
                 </div>
             </div>
         </section>
+        <div class="back-to-top">
+            <a href="#">Back to Top</a>
+        </div>
         <hr>
-        <section>
+        <section id="pictures" class="gallery">
+            <h1 class="gallery-title">A Collection of Fungi</h1>
             <figure>
                 <p>
                     <picture>
@@ -100,7 +136,13 @@
             </figure>
 
         </section>
-        <article>
+        <div class="back-to-top">
+            <a href="#">Back to Top</a>
+        </div>
+        <hr class="mobile-first">
+
+
+        <article id="story" class="story">
             <h1>
                 English 2 Paper
             </h1>
@@ -153,13 +195,17 @@
 
         </article>
 
+
     </main>
-    <hr>
+    <div class="back-to-top">
+        <a href="#">Back to Top</a>
+    </div>
+    <hr class="mobile-first">
     <h1>
         Contact Me!
     </h1>
 
-    <section class="form-container">
+    <section id="contact" class="form-container">
 
         <form method="POST" action="https://formspree.io/g00266522@stu.raritanval.edu">
             <fieldset>
@@ -185,13 +231,34 @@
 
 
     </section>
-<hr>
+    <hr>
 
-<footer>
-    <p class="footer">Nicky Gundersen &#169; 2019</p>
-</footer>
+    <footer>
+        <p class="footer">Nicky Gundersen &#169; 2019</p>
+    </footer>
+    <div class="back-to-top">
+        <a href="#">Back to Top</a>
+    </div>
+    <br class="mobile-first"><br class="mobile-first">
+    <script>
+        let mainNav = document.getElementById('js-menu');
+        let navBarToggle = document.getElementById('js-navbar-toggle');
+        let symbolToggle = document.getElementById('symbol-toggle');
+
+
+        navBarToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+            if (symbolToggle.classList.contains('fa-bars')) {
+                symbolToggle.classList.remove('fa-bars');
+                symbolToggle.classList.add('fa-times');
+            } else {
+                symbolToggle.classList.remove('fa-times');
+                symbolToggle.classList.add('fa-bars');
+            }
+        });
+
+    </script>
 
 
 
 </body>
-
