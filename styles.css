@@ -1,0 +1,24 @@
+body {
+    font-family: 'Sree Krushnadevaraya', serif;
+    
+}
+form-container{
+}
+legend{
+    font-family:monospace;
+}
+input:focus{
+    background-color: chartreuse;
+}
+textarea:focus{
+    background-color: chartreuse;
+}
+
+img {
+    max-width: 100%;
+}
+form{
+ background-color: rebeccapurple;
+    border-width: 4rem blue;
+
+}
